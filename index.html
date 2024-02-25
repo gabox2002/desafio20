@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registro de Usuarios</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <h1>Registro de Usuarios</h1>
+        <form id="formulario">
+            <div class="input-container">
+                <div class="label-icon-container">
+                    <label for="nombre">Nombre:</label>
+                    <span class="validation-icon" id="nombreIcon"></span>
+                </div>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="input-valid"
+                    oninput="formulario.resetearIconoValidacion(nombreIcon)"
+                />
+            </div>
+
+            <div class="input-container">
+                <div class="label-icon-container">
+                    <label for="correo">Correo:</label>
+                    <span class="validation-icon" id="correoIcon"></span>
+                </div>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    class="input-valid"
+                    oninput="formulario.resetearIconoValidacion(correoIcon)"
+                />
+            </div>
+
+            <div class="input-container">
+                <div class="label-icon-container">
+                    <label for="contraseña">Contraseña:</label>
+                    <span class="validation-icon" id="contraseñaIcon"></span>
+                </div>
+                <div class="password-container">
+                    <input
+                        type="password"
+                        id="contraseña"
+                        name="contraseña"
+                        class="password-input input-valid"
+                        oninput="formulario.resetearIconoValidacion(contraseñaIcon)"
+                    />
+                    <i class="fas fa-eye eye-icon" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <button type="submit">Registrar Usuario</button>
+        </form>
+        <table id="tabla_usuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody id="tabla_body"></tbody>
+        </table>
+        <!-- Nuevo contenedor para las cards en dispositivos móviles -->
+        <div class="card-container" id="cardContainer"></div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

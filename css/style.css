@@ -1,0 +1,222 @@
+body {
+    font-family: sistem-ui, sans-serif;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: black;
+    background-image: url("../images/wallpaper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    color: #8061be;
+    text-shadow: 0px 0px 9px #2e1c5b;
+}
+
+table {
+    width: 600px;
+    margin-top: 50px;
+    border-collapse: collapse;
+    margin: 40px auto;
+    display: table;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #583b91;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(166 139 251);
+}
+td {
+    background-color: white;
+}
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    color: black;
+}
+
+.password-input {
+    flex: 1;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+}
+
+#nombre,
+#correo,
+#contraseña {
+    width: 260px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    background-color: transparent;
+    margin-top: 20px;
+    gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label-icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form input {
+    padding: 8px;
+    width: 300px;
+    border-radius: 20px;
+    padding-left: 2rem;
+}
+
+.input-invalid {
+    border-color: #dc3545;
+}
+
+.input-valid {
+    border-color: lightgreen;
+}
+
+.validation-icon {
+    margin-left: 5px;
+}
+
+button {
+    margin: 20px 0 !important;
+    background: #2e1c5b;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+button:hover {
+    background: #b099eb;
+    color: #472992;
+}
+button:before,
+button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #472992;
+    transition: 400ms ease all;
+}
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+#tabla_usuarios {
+    display: none;
+}
+.card-container {
+    display: none;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        padding-top: 20px;
+    }
+    table {
+        display: none !important; 
+    }
+    button {
+        font-size: 1em;
+        padding: 0 1em;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .user-card {
+        display: flex;
+        flex-direction: row;
+        width: 320px;
+        margin: 10px;
+        border: 1px solid #583b91;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .user-card .row1 {
+        background-color: rgb(166 139 251);
+        padding: 10px;
+        text-align: right;
+        font-weight: bold;
+        width: 100px;
+    }
+
+    .user-card .row2 {
+        background-color: white;
+        padding: 10px;
+        text-align: left;
+        width: 220px;
+    }
+
+    .user-card .label {
+        flex: 1;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .user-card .data {
+        flex: 1;
+        padding: 5px;
+    }
+}
